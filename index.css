@@ -1,0 +1,263 @@
+/*обнуляющий css*/
+
+*{
+   padding: 0; /*внутренние отступы*/
+   margin: 0; /*внешние отступы*/
+   border: 0;
+}
+
+ *,*::before,::after{
+   -moz-box-sizing: border-box;
+   -webkit-box-sizing: border-box;
+   box-sizing: border-box;
+ } /*тут меняем ширину блока, чтобы удобнее верстать*/
+
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+ /*меняем линии обводки у некоторых браузеров*/
+
+ nav,footer,header,aside{display: block;}/*делаем эти теги блочными, т.е. занимают всю страницу по ширине*/
+
+ html,body{
+   height: 100%;
+   width: 100%;
+   font-size: 100%;
+   line-height: 1;
+   font-size: 14px;
+   -ms-text-size-adjust: 100%;
+   -moz-text-size-adjust: 100%;
+   -webkit-text-size-adjust: 100%;
+ }/*уравниваем поведение шрифтов и элементов в разных браузерах*/
+
+ input,button,textarea{font-family: inherit;}/*просим эти теги наследовать семейство шрифта*/
+
+ input::-ms-clear{display: none;}/*убирает крестик в инпуте в интернет эксплорер*/
+ button{cursor: pointer;}
+ button::-moz-focus-inner{padding:0; border:0;}
+ a,a:visited{text-decoration: none;}
+ a:hover{text-decoration: none;}
+ ul li{list-style: none;}
+ img{vertical-align: top;}
+
+ h1,h2,h3,h4,h5,h6{font-size: inherit; font-weight: 400;}/*обнуляем все заголовки*/
+/*---------------------------------*/
+
+/* roboto-regular - latin_cyrillic */
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''),
+         url('./fonts/roboto-v30-latin_cyrillic-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('./fonts/roboto-v30-latin_cyrillic-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  /* roboto-700 - latin_cyrillic */
+  @font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    src: local(''),
+         url('./fonts/roboto-v30-latin_cyrillic-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('./fonts/roboto-v30-latin_cyrillic-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  /* roboto-900 - latin_cyrillic */
+  @font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 900;
+    src: local(''),
+         url('./fonts/roboto-v30-latin_cyrillic-900.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('./fonts/roboto-v30-latin_cyrillic-900.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  /*---------------------------------*/
+
+
+html {
+    box-sizing: border-box;  /* паддинги не будут изменять ширину блока */
+ }
+
+ *, *::before, *::after {
+    box-sizing: inherit; /* inherit-наследовать параметры от родителя */
+ }
+
+body {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: 400;
+    color: white;
+
+ } 
+ .wrapper{
+    max-width: 910px;
+    margin: 0 auto;
+ }
+
+ /* header styles start */
+
+ .header{  /* при скроле навигация всегда на месте */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+ .header__wrapper{
+     display: flex;
+     flex-wrap: wrap;
+     align-items: center;
+     justify-content: space-around;
+     padding-top: 30px;
+ }
+
+ .header__list{
+    display: flex;
+    flex-wrap: wrap;
+ }
+
+ li{
+    margin-right: 50px;
+ }
+
+ .header__link{
+    font-size: 20px;
+    line-height: 142%;
+    color: white;
+    text-decoration: none;
+ }
+
+ .header__link:hover, header__link:focus, header__link:active { /* при наведении, клике мышкой и при нажатии таб, ссылка будет реагировать */
+    opacity: .75;
+ }
+
+ /* header styles end */
+
+
+
+  /* main styles start */
+
+.main{
+     min-height: 100vh; /* vh-высота по высоте экрана */
+     background: url(./img/header-img.png) no-repeat center;
+     background-size: cover;
+     padding-top: 207px;
+     padding-bottom: 309px;
+}
+
+.title{
+    max-width: 914 px;
+    font-weight: 700;
+    font-size: 96px;
+    line-height: 109%;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.text{
+    max-width: 442 px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 142%;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.search-form__button{
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 142%;
+}
+
+.search-form{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 5px 20px;
+    gap: 10px;
+    width: 118px;
+    height: 34px;
+    background: #FFFFFF;
+    border-radius: 50px;
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+    /* margin-bottom: 119px; */
+    margin-left: 400px;
+}
+
+.search-form:hover, .search-form__submit:focus,.search-form__submit:active{
+    opacity: .75;
+}
+
+
+  /* main styles end */
+
+    @media (max-width:360px){ 
+       .wrapper{ 
+          max-width: none; 
+          flex-wrap: wrap;
+       } 
+       .title{
+        font-weight: 700;
+        font-size: 34px;
+        line-height: 112%;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    .text{
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 142%;
+        text-align: center;
+        margin-bottom: 45px;
+    }
+    .search-form{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 5px 20px;
+        gap: 10px;
+        width: 118px;
+        height: 34px;
+        background: #FFFFFF;
+        border-radius: 50px;
+        flex: none;
+        order: 2;
+        flex-grow: 0;
+        margin-bottom: 119px;
+        margin-left: 115px;
+    }
+    .header__nav{
+        display: none;
+    }
+    } 
+
+    @media (max-width:1920px){ 
+       
+        .search-form{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 5px 20px;
+            gap: 10px;
+            width: 118px;
+            height: 34px;
+            background: #FFFFFF;
+            border-radius: 50px;
+            flex: none;
+            order: 2;
+            flex-grow: 0;
+            margin-bottom: 119px;
+            margin-left: 330px;
+        }
+        .title{
+            width: 768px;
+            height: 315px;
+            text-align: center;
+        }
+        .text{
+            width: 562px;
+            height: 56px;
+            text-align: center;
+        }
+     } 
