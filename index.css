@@ -222,6 +222,9 @@ body {
         }
         .text-div{
             margin: 40px auto 45px;
+            max-height: 96px;
+            max-width: 310px;
+            position: relative;
         }
         .text{
             font-weight: 400;
