@@ -191,6 +191,7 @@ body {
   /* main__intro styles end */
 
 
+
   /* main__places styles start */
 
 
@@ -234,17 +235,16 @@ body {
  .places__cards{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-     grid-gap: 30px; /*отступы от картинок */
-     margin-top: 106px;
+    grid-gap: 30px; /*отступы от картинок */
+    margin-top: 106px;
 }
 
 .places__card{
     position: relative;
     overflow: hidden;
     border-radius:40px;
-    width: 100%;
+    max-width: 100%;
     height: 531px;
-    
 }
 
 .places__card:hover .places__card-pic{
@@ -337,7 +337,6 @@ body {
 }
 
 form .half{
-    display: flex;
     justify-content: space-between;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -348,7 +347,6 @@ form .half .item{
     flex-direction: column;
     margin-bottom: 24px;
     width: 48%;
-    
 }
 
 form label{
@@ -408,8 +406,6 @@ form .comment textarea{
 form .radiobtn{
 margin-bottom: 33px;
 }
-
-
 
 .radio1{
     zoom: 1.8;
@@ -499,7 +495,7 @@ form .agreement input{
 
  .reviews__title{
     margin: 0 auto;
-    margin-top: 165px;
+    margin-top: 135px;
     max-width: 529px;
  }
 
@@ -514,7 +510,6 @@ form .agreement input{
 
 
 .review__info{
-   
   display: flex;
   position: absolute;
    bottom: 40px;
@@ -673,6 +668,7 @@ margin-top: 135px;
     align-items: center;
     margin-top: 135px;
 }
+
 .mail__wrapper{
    max-width: 765px;
     position: relative;
@@ -733,7 +729,6 @@ color: #1B1F2B;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    
 }
 
 .footer__list{
@@ -758,31 +753,90 @@ color: #1B1F2B;
 
 
 
-foot__list{
-   margin-right: 38px;
-}
-
 
 /* footer styles end */
 
 
   /* adaptive */
 
+  @media (max-width:1920px){
+    .wrapper{
+        max-width: 1170px;
+     }
+  }
+
+
+
   @media (max-width:1024px){ 
     .wrapper{
-        max-width: 910px;
+        max-width: 918px;
      }
+
+     .places__cards{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+         grid-gap: 18px; /*отступы от картинок */
+         margin-top: 106px;
+    }
+
+    .places__card-pic{
+        width:450px;
+    }
+    
+    .wid{
+    width: 350px;
+}
+    form .half .item select{
+    width: 350px;
+}
+
+ .one__review{
+    width: 450px;
+    height: 841px;
+    padding: 40px;
+    background: #F4F0E9;
+    border-radius: 50px;
+    position: relative;
+}
   
+.review__img{
+margin-left: 180px;
+}
+
+.piciures__cards{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 20px;
+ }
+
+ .pictures__card_size_sm{
+    grid-column: span 4;
+ }
+
+ .pictures__card_size_lg{
+    grid-column: span 3;
+ }
+
+.noneOne{
+    display:none;
+}
+
 } 
 
     @media (max-width:360px){ 
         .wrapper{
-            max-width: 320px;
+            max-width: 318px;
          }
 
-        .header__nav{
-            display: none;
-        }
+         
+         .header__nav{
+             display: none;
+            }
+            
+        .main__intro{
+            padding-top: 85px;
+            }
+
         img{
             height: 22px;
             width: 133px;
@@ -791,6 +845,15 @@ foot__list{
             padding-top: 85px;
        }
     
+       .allTitle{
+        font-size: 34px;
+       }
+       .allSubtitle{
+        font-size: 16px;
+        width: 318px;
+        height: 46px;
+       }
+
         .title{
             font-weight: 700;
             font-size: 34px;
@@ -809,5 +872,217 @@ foot__list{
             line-height: 142%;
             text-align: center;
         }
+        .places__wrapper{
+            margin-top: 75px;
+          }
+
+
+        .places__cards{
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+             grid-gap: 18px; /*отступы от картинок */
+             margin-top: 106px;
+        }
+
+        .places__card{
+            height: 318px;
+        }
+
+        .places__card-pic{
+            width:318px;
+            height: 318px;
+        }
+
+        .places__link{
+            font-size: 16px;
+            
+         }
+
+
+         form{
+            width: 318px;
+            margin-top: 40px;
+            padding: 30px;
+         }
+
+         .form__title{
+            margin-top: 75px;
+         }
         
+         .wid{
+            width: 248px;
+        }
+
+        form .half .item select{
+           
+            width: 248px;
+        }
+
+        form .half{
+            justify-content: space-between;
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+
+        .btn{
+            display:inline-block;
+        }
+       
+        .search{
+            font-size: 16px;
+            padding: 10px 25px;
+            margin-right: 10px;
+            margin-top: 30px; 
+        }
+        
+        .del{
+            font-size: 16px;
+            padding: 10px 25px;
+            margin-top: 30px;
+        }
+
+        .few__reviews{
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-gap: 18px; 
+        }
+
+        .one__review{
+            width: 318px;
+            border-radius: 20px;
+            padding: 20px;
+                    }
+
+                
+        .maria{
+            height: 408px;
+        }
+
+        .pavel{
+            height: 592px;
+        }
+
+
+        .review__img{
+            margin-left: 14git 0px;
+            width: 75px;
+            height: 75px;
+            }
+
+         .review__text{
+          font-size: 16px;
+         }
+
+         .review__name{
+            font-size: 23px;
+         }
+        
+         .review__tour{
+            font-size: 14px;
+         }
+        
+        
+        .piciures__cards{
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            grid-gap: 10px;
+         }
+
+         .pictures__card_size_sm{
+            grid-column: span 3;
+         }
+        
+         .pictures__card_size_lg{
+            grid-column: span 2;
+         }
+         .pictures__card-pic{
+            height: 110px;
+            width: 100%;
+            border-radius: 20px;
+         }
+        
+        .noneTwo{
+            display:none;
+        }
+
+        .few__stories{
+            grid-gap: 20px;
+        }
+        
+        .stories__card{
+            height: 455px;
+        }
+
+        .stories__card img{
+            border-radius: 20px;
+            width: 319px;
+            height: 455px;
+        }
+
+        .stories__card::after{
+            border-radius: 20px;
+        }
+
+        .stories__card-title{
+            font-size: 23px;
+            top: 30px;
+            left: 30px;
+        }
+
+        
+        .stories__card-text{
+            font-size: 16px;
+            top: 30px;
+            left: 30px;
+            width: 263px;
+                   }
+        
+        .social__media{
+            display: none;
+        }
+
+        .end{
+            display: block;
+            margin-top: 75px;
+        }
+
+        .mail__wrapper{
+            max-width: 291px;
+         }
+
+         .mail__pic{
+            width: 130px;
+            height: 133px;
+            margin-left: 75px;
+        }
+
+        .title__mail{
+            font-size: 23px;
+            width: 291px;
+           justify-content: center;
+        }
+
+        .text__mail{
+            font-size: 16px;
+            width: 291px;
+        }
+
+        .abou__us{
+            font-size: 16px;
+            margin-bottom: 7px;
+            text-align: center;
+        }
+
+        .foot__list{
+            font-size: 16px;
+        }
+
+        .footer__list{
+            display: flex;
+            flex-wrap: nowrap;
+         }
+        
+         li{
+            margin-right: 15px;
+         }
     } 
