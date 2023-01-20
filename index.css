@@ -1085,4 +1085,8 @@ margin-left: 180px;
          li{
             margin-right: 15px;
          }
+
+           .btn{
+            display: flex;
+         }
     } 
