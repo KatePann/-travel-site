@@ -855,7 +855,6 @@ margin-left: 180px;
             max-width: 318px;
          }
 
-         
          .header__nav{
              display: none;
             }
@@ -864,10 +863,6 @@ margin-left: 180px;
             padding-top: 85px;
             }
 
-        img{
-            height: 22px;
-            width: 133px;
-        }
         .main{
             padding-top: 85px;
        }
@@ -991,7 +986,7 @@ margin-left: 180px;
 
 
         .review__img{
-            margin-left: 14git 0px;
+            margin-left: 14px 0px;
             width: 75px;
             height: 75px;
             }
