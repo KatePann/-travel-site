@@ -6,23 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Найди свой уникальный тур на сайте YourTour. Путешествуй легко и с удовольствием." />
     <meta name="keywords" content="тур, путешествия, отдых" />
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="icon" href="/img/fav.png" type="image/x-icon">
     <title>Идеальные путешествия</title>
 </head>
 
 <body>
-    <header >
+    <header>
         <div class="wrapper">
             <div class="header">
-                <div class="header__wrapper">
 
                     <div class="header__logo">
-                        <a href="/" class="header__logo-link">
-                            <img src="./img/YourTour.png" alt="Логотип"> 
+                        <a href="/index.html" class="header__logo-link">
+                            <img src="img/LogoYourTour.svg" alt="Логотип"> 
                         </a>
                     </div>
-
 
                     <nav class="header__nav"> 
                         <ul class="header__list">
@@ -34,39 +32,36 @@
                     </nav>
 
                     <section class="header__telephone" itemscope itemtype="http://schema.org/Organization">
-                        <span itemprop="telephone">+7 999 999 99 99</span>
+                        <a class="telephone" href="tel:+7 999 999 99 99">+7 999 999 99 99</a>
                     </section>
 
+            </div>    
+            
+            <section class="main__intro">
+                
+                <div class="title-div">
+                        <h1 class="main__title">Идеальные путешествия существуют</h1>
+                    </div>
+                
+                <div class="text-div">
+                    <p class="main__text">Идейные соображения высшего порядка, а также рамки и место обучения кадров</p>
+                    </div>
+                
+                <div class="search-form">
+                        <a class="button" href="#">Найти тур</a>
                 </div>
-            </div>
+                    
+            </section>
+           
+            
         </div>
     </header>
 
      <main> 
 
-        <section class="main__intro">
-            <div class="wrapper">
-                <div class="main__wrapper">
-                    <section class="title">
-                        <div class="title-div">
-                            <h1 class="main__title">Идеальные путешествия существуют</h1>
-                        </div>
-                    </section>
-                    <section class="text">
-                        <div class="text-div">
-                            <p class="main__text">Идейные соображения высшего порядка, а также рамки и место обучения кадров</p>
-                        </div>
-                    </section>
-                    <div class="search-form">
-                        <a class="tour__more">Найти тур</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <section class="places">
             <div class="wrapper">
-                <div class="places__wrapper">
+                
                     <div class="places__title">
                         <h2 class="allTitle">Выбери свой тур</h2>
                     </div>
@@ -174,130 +169,138 @@
                         </figure>
 
                     </div>
-                </div>
+                
             </div>
         </section>
 
+
         <section class="feedback-form">
             <div class="wrapper">
-                <div class="form__wrapper">
-                    <div class="form__title">
-                        <h2 class="allTitle">Собери свой тур</h2>
-                    </div>
-                    <div class="form__subtitle">
-                        <p class="allSubtitle">Идейные соображения высшего порядка,а также рамки и место обучения кадров</p>
-                    </div>
-                    <div class="container">
-                        <div class="content">
-                            <form name="form" method="post" action="#">
-        
-                                <div class="half">
-                                    <div class="item">
-                                        <label for="name">Имя</label>
-                                        <input class="wid" type="text" name="name" id="name" placeholder="Введите Ваше имя">
-                                    </div>
-                                    
-                                    <div class="item">
-                                        <label for="direction">Направление</label>
-                                        <select id="direction" name="direction">
-                                            <option class="option">Куда хотите ехать</option>
-                                            <option>Москва</option>
-                                            <option>Сочи</option>
-                                            <option>Краснодар</option>
-                                        </select>
-                                    </div>
+                <div class="form__title">
+                    <h2 class="allTitle">Собери свой тур</h2>
+                </div>
+                <div class="subtitle">
+                    <p class="allSubtitle">Идейные соображения высшего порядка,а также рамки и место обучения кадров</p>
+                </div>
+                
+                <form name="form" method="post" action="#">
 
-                                    <div class="item">
-                                        <label for="email">Email</label>
-                                        <input class="wid" type="email" name="email" id="email" placeholder="example@mail.com">
-                                    </div>
-                                    
-                                    <div class="item">
-                                        <label for="phone">Телефон</label>
-                                        <input class="wid" type="text" id="phone" name="phone" placeholder="+ 7 ( _ _ _ ) _ _ _ - _ _ - _ _"/>
-                                    </div>
+                    <div class="half">
 
-                                    <div class="item">
-                                        <label for="dateIn">Дата от</label>
-                                        <input class="wid" type="text" name="dateIn" id="dateIn" placeholder="ДД.ММ.ГГГГ"/>
-                                    </div>
-        
-                                    <div class="item">
-                                        <label for="dateTo">Дата до</label>
-                                        <input class="wid" type="text" name="dateIn" id="dateTo" placeholder="ДД.ММ.ГГГГ"/>
-                                    </div>
+                        <div class="form__row">
+                            <div class="item">
+                                <label class="form__label" for="name">Имя</label>
+                                <input class="form__input" type="text" name="name" id="name" placeholder="Введите Ваше имя">
+                            </div>
+                            
+                            <div class="item">
+                                <label class="form__label" for="direction">Направление</label>
+                                <select class="form__input form__input-select" id="direction" name="direction">
+                                    <option >Куда хотите ехать</option>
+                                    <option class="option">Москва</option>
+                                    <option class="option">Сочи</option>
+                                    <option class="option">Краснодар</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form__row">
+                            <div class="item">
+                                <label class="form__label" for="email">Email</label>
+                                <input class="form__input" type="email" name="email" id="email" placeholder="example@mail.com">
+                            </div>
+                            
+                            <div class="item">
+                                <label class="form__label" for="phone">Телефон</label>
+                                <input class="form__input" type="text" id="phone" name="phone" placeholder="+ 7 ( _ _ _ ) _ _ _ - _ _ - _ _"/>
+                            </div>
+                        </div>
+
+                        <div class="form__row">
+                            <div class="item">
+                                <label class="form__label" for="dateIn">Дата от</label>
+                                <input class="form__input" type="text" name="dateIn" id="dateIn" placeholder="ДД.ММ.ГГГГ"/>
+                            </div>
+
+                            <div class="item">
+                                <label class="form__label" for="dateTo">Дата до</label>
+                                <input class="form__input" type="text" name="dateIn" id="dateTo" placeholder="ДД.ММ.ГГГГ"/>
+                            </div>
+                        </div>
+
+                        <div class="comment">
+                            <label class="form__label form__label-comment" for="com">Комментарий</label>
+                            <textarea class="form__input form__input-textarea" id="com" name="comment"></textarea>
+                        </div>
     
-                                </div>
-
-                                <div class="comment">
-                                    <label for="com">Комментарий</label>
-                                    <textarea id="com" name="comment"></textarea>
-                                </div>
+                        <div class="radiobtn">
+                            <label class="form__label" for="radiobutton" class="radio">Вам есть 18 лет?</label>
+                            <fieldset id="radiobutton">
+                                    <input type="radio" class="radio1" name="radio">Да
+                                    <input type="radio" class="radio2" name="radio">Нет
+                            </fieldset>
+                        </div>
     
-                                <div class="radiobtn">
-                                    <label for="radiobutton" class="radio">Вам есть 18 лет?</label>
-                                    <fieldset id="radiobutton">
-                                            <input type="radio" class="radio1" name="radio">Да
-                                            <input type="radio" class="radio2" name="radio">Нет
-                                    </fieldset>
-                                </div>
+                        <div class="agreement">
+                            <input class="info" type="checkbox" id="checkbox" name="checkbox">
+                            <label class="form__label-agreement" class="sm" for="checkbox"><span class="colortext">Нажимая кнопку, я принимаю условия </span>Лицензионного договора</label>
+                        </div>
     
-                                <div class="agreement">
-                                    <input class="info" type="checkbox" id="checkbox" name="checkbox">
-                                    <label class="sm" for="checkbox"><span class="colortext">Нажимая кнопку, я принимаю условия </span>Лицензионного договора</label>
-                                </div>
-
-                                <div class="btn">
-                                    <button class="search" type="submit" value="Найти тур">Найти тур</button>
-                                    <button class="del" type="reset" value="Сбросить">Сбросить</button>
-                                </div>
-        
-                            </form>
+                        <div class="btn">
+                            <button class="search" type="submit" value="Найти тур">Найти тур</button>
+                            <button class="del" type="reset" value="Сбросить">Сбросить</button>
                         </div>
                     </div>
-                </div>
+
+
+                </form>
+        
             </div>
             
         </section>
 
         <section class="reviews">
             <div class="wrapper">
-                <div class="riwews__wrapper">
+                
 
                     <div class="reviews__title">
                         <h2 class="allTitle">Отзывы наших путешественников</h2>
                     </div>
-                    <div class="reviews__subtitle">
-                        <p class="allSubtitle">Идейные соображения высшего порядка,а также рамки и место обучения кадров</p>
+                    <div class="subtitle">
+                        <p class="allSubtitle allSubtitle__reviews">Идейные соображения высшего порядка,а также рамки и место обучения кадров</p>
                     </div>
                     <div class="few__reviews">
                         
-                        <div class="one__review maria">
+                        <div class="one__review">
                             <p class="review__text">
                                 Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании новых предложений. Идейные соображения высшего порядка, а также начало повседневной работы по формированию позиции позволяет оценить значение модели развития.
                             </p>
                             <div class="review__info">
-                                <div class="review__name">Мария</div>
-                                <div class="review__tour qwe">Тур: Вдали от дома </div>
-                                <div class="review__img"><img src="img/photo/image 1.jpg" alt="Мария"></div>
+                                <div>
+                                    <div class="review__name">Мария</div>
+                                    <div class="review__tour">Тур: Вдали от дома </div>
+                                </div>
+                                 <img  class="review__img" src="img/photo/image 1.jpg" alt="Мария">
                             </div>
                         </div>
 
-                        <div class="one__review pavel">
+                        <div class="one__review">
                             <p class="review__text">
                                 Равным образом постоянный количественный рост и сфера нашей активности играет важную роль в формировании системы обучения кадров, соответствует насущным потребностям.
                                 <br><br>
 Значимость этих проблем настолько очевидна, что дальнейшее развитие различных форм деятельности обеспечивает широкому кругу (специалистов) участие в формировании новых предложений. Повседневная практика показывает, что реализация намеченных плановых заданий в значительной степени обуславливает создание модели развития.
                             </p>
                             <div class="review__info">
-                                <div class="review__name">Павел</div>
-                                <div class="review__tour qwe">Тур: Путешествие в горы </div>
-                                <div class="review__img"><img src="img/photo/image 43.jpg" alt="Павел"></div>
+                                <div>
+                                    <div class="review__name">Павел</div>
+                                    <div class="review__tour">Тур: Путешествие в горы </div>
+                                </div>
+                                <img class="review__img" src="img/photo/image 43.jpg" alt="Павел">
                             </div>
                         </div>
 
                     </div>
-                </div>
+               
             </div>
         </section>
 
@@ -307,7 +310,7 @@
                     <div class="pictures__title">
                         <h2 class="allTitle">Фотографии путешествий</h2>
                     </div>
-                    <div class="pictures__subtitle">
+                    <div class="subtitle">
                         <p class="allSubtitle">Идейные соображения высшего порядка,а также рамки и место обучения кадров</p>
                     </div>
 
@@ -360,91 +363,88 @@
 
         <section class="stories">
             <div class="wrapper">
-                <div class="stories__wrapper">
+               <div class="stories__wrapper">
 
                     <div class="stories__title">
                         <h2 class="allTitle">Истории путешествий</h2>
                     </div>
-                    <div class="stories__subtitle">
+                    <div class="subtitle">
                         <p class="allSubtitle">Идейные соображения высшего порядка,а также рамки и место обучения кадров</p>
                     </div>
 
                     <div class="few__stories">
 
-                        <figure class="stories__card">
-                            <img src="img/stories/image1.jpg" alt="one" class = "stories__card">
-                           <figcaption>
-                               <div class="stories__card-title">
-                                   Автостопом в Стамбул
-                               </div>
-                               <div class="stories__card-text">
-                                   Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании новых предложений.
-                                   <br><br>
-                                   <ul class="list__stor">
-                                       <li class="list__stor-li">вкусная еда</li>
-                                       <li class="list__stor-li">дешевый транспорт</li>
-                                       <li class="list__stor-li">красивый город</li>
-                                   </ul>
-                               </div>
-   
-                               <div class="stories__card-social">
-                                   <a href="#!" class="places__card-link stor">Подробнее</a>
-                                   <div class="social__media">
-                                       <ul>
-                                           <li>instagram</li>
-                                           <li>facebook</li>
-                                           <li>YouTube</li>
+                        <div class="stories__card stories__card-imgone">
+                           <div>
+                              <div class="stories__card-title">
+                                 Автостопом в Стамбул
+                              </div>
+                              <div class="stories__card-text">
+                                 Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании новых предложений.
+                                 <br><br>
+                                 <ul class="list__stor">
+                                    <li class="list__stor-li">вкусная еда</li>
+                                    <li class="list__stor-li">дешевый транспорт</li>
+                                    <li class="list__stor-li">красивый город</li>
+                                 </ul>
+                              </div>
+                           </div>
+                           <div class="stories__card-social">
+                              <a href="#" class="stories__card-link">Подробнее</a>
+                              <div class="social__media">
+                                 <ul class="social__media-all">
+                                       <li class="social__media-li">instagram</li>
+                                       <li class="social__media-li">facebook</li>
+                                       <li class="social__media-li">YouTube</li>
+                                 </ul>
+                              </div>
+                           </div>
+                        </div>
+
+                        <div class="stories__card stories__card-imgtwo">
+                              <div>
+                                 <div class="stories__card-title">
+                                    Автостопом в Стамбул
+                                 </div>
+                                 <div class="stories__card-text">
+                                    Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании новых предложений.
+                                 </div>
+                              </div>
+                              <div class="stories__card-social">
+                                 <a href="#!" class="stories__card-link">Подробнее</a>
+                                 <div class="social__media">
+                                       <ul class="social__media-all">
+                                          <li class="social__media-li">instagram</li>
+                                          <li class="social__media-li">ВКонтакте</li>
                                        </ul>
-                                   </div>
-                               </div>
-                           </figcaption>
-                        </figure>
+                                 </div>
+                              </div>
+                        </div>
 
-                        <Auto Rename Tag class="stories__card">
-                            <img src="img/stories/image2.jpg" alt="one" class = "stories__card-pic">
-                            <figcaptio>
-                                <div class="stories__card-title">
+                        <div class="stories__card stories__card-imgtree">
+                           <div>
+                              <div class="stories__card-title">
                                     Автостопом в Стамбул
-                                </div>
-                                <div class="stories__card-text">
+                              </div>
+                              <div class="stories__card-text">
                                     Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании новых предложений.
-                                </div>
-                                <div>
-                                    <a href="#!" class="places__card-link">Подробнее</a>
-                                    <div class="social__media">
-                                        <ul>
-                                            <li>instagram</li>
-                                            <li>ВКонтакте</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </figcaption>
-                        </Auto Rename Tag>
-
-                        <Auto Rename Tag class="stories__card">
-                            <img src="img/stories/image3.jpg" alt="one" class = "stories__card-pic">
-                            <figcaption>
-                                <div class="stories__card-title">
-                                    Автостопом в Стамбул
-                                </div>
-                                <div class="stories__card-text">
-                                    Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании новых предложений.
-                                </div>
-                                <div>
-                                    <a href="#!" class="places__card-link">Подробнее</a>
-                                    <div class="social__media">
-                                        <ul>
-                                            <li>instagram</li>
-                                            <li>facebook</li>
-                                            <li>ВКонтакте</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </figcaption>
-                        </Auto Rename Tag>
+                              </div>
+                           </div>
+                           <div class="stories__card-social">
+                              <a href="#!" class="stories__card-link">Подробнее</a>
+                              <div class="social__media">
+                                    <ul class="social__media-all">
+                                       <li class="social__media-li">instagram</li>
+                                       <li class="social__media-li">facebook</li>
+                                       <li class="social__media-li">ВКонтакте</li>
+                                    </ul>
+                              </div>
+                           </div>
+                        </div>
 
                     </div>
-                </div>
+
+               </div>
             </div>
         </section>
 
@@ -452,8 +452,8 @@
             <div class="wrapper">
                 <div class="mail__wrapper">
                     <div class="end">
-                        <img class="mail__pic child" src="img/end1.svg" alt="">
-                        <div class="mail__info child">
+                        <img class="mail__pic" src="img/end1.svg" alt="">
+                        <div class="mail__info">
                             <h2 class="title__mail">Пора в путешествие вместе с нами!</h2>
                             <p class="text__mail">Напиши на почту и узнай подробности на <span>yourtour@gmail.com</span>  </p>
                         </div>
@@ -462,19 +462,22 @@
             </div>
         </section>
 
-        <footer class="footer">
-            <div class="wrapper">
-                <div class="footer__wrapper">
-                    <h2 class="abou__us">Наши социальные сети</h2>
-                    <ul class="footer__list">
-                        <li class="foot__list inst">instagram</li>
-                        <li class="foot__list face">facebook</li>
-                        <li class="foot__list vk">vkontakte</li>
-                    </ul>
-                </div>
-            </div>
-        </footer>
     </main> 
+    
+    <footer class="footer">
+        <div class="wrapper">
+            <div class="footer__wrapper">
+
+                <h2 class="abou__us">Наши социальные сети</h2>
+                <ul class="footer__list">
+                    <li class="foot__list inst">instagram</li>
+                    <li class="foot__list face">facebook</li>
+                    <li class="foot__list vk">vkontakte</li>
+                </ul>
+
+            </div>
+        </div>
+    </footer>
 
 </body>
 </html>

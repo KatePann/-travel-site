@@ -392,10 +392,12 @@ form .half .item select{
 
 ::placeholder{
     color: #A6A6A6;
+    font-size: 20px;
 }
 
-.option{
+.form__input .option{
     color: #A6A6A6; 
+    font-size: 20px;
 }
 
 form .comment{
